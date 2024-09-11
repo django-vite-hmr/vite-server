@@ -1,6 +1,6 @@
 {
     "name": "@django-vite/vite-server",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "This provide cli to start Express Server with Chokidar to detect any file changes and send events.",
     "main": "./dist/server.js",
     "author": "Sachin Acharya",
@@ -12,16 +12,17 @@
     "scripts": {
         "dev": "tsx src/server.ts",
         "watch": "tsc --watch",
-        "build": "tsc --build"
+        "build": "tsc --build",
+        "prepublish": "yarn build"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/django-vite-hmr/vite-server.git"
     },
     "bugs": {
-        "url": "https://github.com/django-vite-hmr/vite-plugin/issues"
+        "url": "https://github.com/django-vite-hmr/vite-server/issues"
     },
-    "homepage": "https://github.com/django-vite-hmr/vite-plugin#readme",
+    "homepage": "https://github.com/django-vite-hmr/vite-server#readme",
     "keywords": [
         "django-vite",
         "vite-hmr",

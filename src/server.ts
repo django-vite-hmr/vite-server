@@ -18,7 +18,7 @@ const chokidarConfig = await getConfig<
 >("./chokidar.config")
 
 const { paths, ...chokidarConf } = chokidarConfig
-const watcher = chokidar.watch([path.resolve(__dirname, "views")], {
+const watcher = chokidar.watch(paths ? paths : "./**/*.+(html)", {
     persistent: true,
     ...chokidarConf,
 })
@@ -33,7 +33,7 @@ async function createServer() {
     })
 
     app.use(vite.middlewares)
-    app.use("/static", express.static(path.resolve(__dirname, "static")))
+    // app.use("/static", express.static(path.resolve(__dirname, "static")))
 
     app.get("", (_, res) => {
         res.sendFile(path.resolve(__dirname, "views", "index.html"))
