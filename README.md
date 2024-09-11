@@ -65,7 +65,9 @@ socket.onclose = () => {
     // chokidar.config.ts
     import { WatchOptions } from "chokidar"
 
-    const options: WatchOptions = {}
+    const options: WatchOptions & {
+        paths: string | readonly string[]
+    } = {}
     export default options
     ```
 
@@ -79,6 +81,7 @@ socket.onclose = () => {
      * Override Chokidar Configuration
      *
      * @type {WatchOptions}
+     * @property {string | readonly string[]} paths
      */
     const options = {}
     export default options
@@ -86,6 +89,6 @@ socket.onclose = () => {
 
     > Using docstring to provide typing.
 
-
 ### Integration with Django
+
 [Documentation](https://github.com/django-vite-hmr#vite-server)
