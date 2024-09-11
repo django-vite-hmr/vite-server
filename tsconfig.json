@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "module": "NodeNext",
+        "outDir": "dist"
+    },
+    "exclude": [
+        "test",
+        "node_modules/**/*",
+        "vite.config.ts",
+        "chokidar.config.ts",
+    ],
+}

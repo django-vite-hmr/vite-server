@@ -1,1 +1,5 @@
 node_modules
+test
+vite.config.ts
+chokidar.config.ts
+dist
